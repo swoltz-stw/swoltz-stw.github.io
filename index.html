@@ -30,20 +30,20 @@
         /* Main Structural Grid Container */
         .container { max-width: 1200px; margin: 0 auto; padding: 0 2rem; }
         
-        /* Curated Center Alignment for Single Available Piece */
-        .single-gallery { display: flex; justify-content: center; margin-bottom: 6rem; }
-        .art-card { background: #ffffff; display: flex; flex-direction: column; width: 100%; max-width: 450px; transition: transform 0.4s ease; }
+        /* Premium Fine Art Grid Portfolio Inventory (3-Column Layout) */
+        .gallery { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 3rem; margin-bottom: 6rem; }
+        .art-card { background: #ffffff; display: flex; flex-direction: column; transition: transform 0.4s ease; border: 1px solid #fbfbfb; }
         
         /* Image Framing Block */
-        .image-frame { width: 100%; height: 420px; overflow: hidden; background-color: #fcfcfc; border: 1px solid #f0f0f0; cursor: zoom-in; position: relative; display: flex; justify-content: center; align-items: center; padding: 1.5rem; box-shadow: inset 0 0 20px rgba(0,0,0,0.01); }
+        .image-frame { width: 100%; height: 380px; overflow: hidden; background-color: #fcfcfc; border: 1px solid #f0f0f0; cursor: zoom-in; position: relative; display: flex; justify-content: center; align-items: center; padding: 1.5rem; box-shadow: inset 0 0 20px rgba(0,0,0,0.01); }
         .image-frame img { max-width: 100%; max-height: 100%; object-fit: contain; transition: transform 0.5s cubic-bezier(0.16, 1, 0.3, 1); filter: drop-shadow(0 5px 15px rgba(0,0,0,0.06)); }
         .image-frame:hover img { transform: scale(1.03); }
         
         /* Art Descriptive Typography */
         .art-details { padding: 1.5rem 0; display: flex; flex-direction: column; flex-grow: 1; text-align: left; }
-        .art-title { font-family: 'Georgia', serif; font-size: 1.35rem; font-weight: 400; margin-bottom: 0.3rem; color: #111111; letter-spacing: 0.5px; }
+        .art-title { font-family: 'Georgia', serif; font-size: 1.25rem; font-weight: 400; margin-bottom: 0.3rem; color: #111111; letter-spacing: 0.5px; }
         .art-meta { color: #888888; font-size: 0.8rem; margin-bottom: 1rem; letter-spacing: 0.5px; text-transform: uppercase; }
-        .art-price { font-size: 1.25rem; font-weight: 600; margin-bottom: 1.25rem; color: #111111; }
+        .art-price { font-size: 1.2rem; font-weight: 600; margin-bottom: 1.25rem; color: #111111; }
         
         /* Transaction Acquisition Action Call Button */
         .buy-btn { background: #111111; color: #ffffff; text-align: center; padding: 1rem; border: 1px solid #111111; text-decoration: none; font-weight: 500; font-size: 0.85rem; letter-spacing: 2px; text-transform: uppercase; margin-top: auto; transition: all 0.2s ease-in-out; }
@@ -117,10 +117,10 @@
 
     <div class="container">
         
-        <!-- Single Center-Aligned Art Piece -->
-        <section class="single-gallery">
+        <!-- Three-Column Artwork Grid -->
+        <section class="gallery">
             
-            <!-- Item 1: Dolly -->
+            <!-- Piece 1: Dolly -->
             <div class="art-card">
                 <div class="image-frame" onclick="openLightbox('art1.jpeg')">
                     <img src="art1.jpeg" alt="Dolly - Acrylic Painting by Layla">
@@ -129,26 +129,29 @@
                     <div class="art-title">Dolly</div>
                     <div class="art-meta">Acrylic Canvas Piece &bull; 2026</div>
                     <div class="art-price">$45.00</div>
-                    <!-- Paste your payment link inside href="..." -->
                     <a href="#" target="_blank" class="buy-btn">Purchase Artwork</a>
                 </div>
             </div>
 
-        </section>
-
-        <!-- Newsletter Sign-Up Box -->
-        <section class="newsletter-section">
-            <div class="newsletter-content">
-                <h3>Join the Collector's List</h3>
-                <p>Sign up for our newsletter today and enjoy exclusive studio previews and 20% off your next purchase!</p>
-                <form action="https://formspree.io" method="POST" class="newsletter-form">
-                    <input type="email" name="email" class="newsletter-input" placeholder="Enter your email address..." required>
-                    <button type="submit" class="newsletter-submit">Subscribe</button>
-                </form>
+            <!-- Piece 2: Daytime Bees -->
+            <div class="art-card">
+                <div class="image-frame" onclick="openLightbox('art2.jpeg')">
+                    <img src="art2.jpeg" alt="Daytime Bees by Layla">
+                </div>
+                <div class="art-details">
+                    <div class="art-title">Daytime Bees</div>
+                    <div class="art-meta">Colored Pencil on Archival Paper</div>
+                    <div class="art-price">$45.00</div>
+                    <a href="#" target="_blank" class="buy-btn">Purchase Artwork</a>
+                </div>
             </div>
-        </section>
 
-        <!-- Tailored Artist Bio Section -->
-        <section class="bio-section" id="about">
-            <div class="bio-text">
-                <h3>Fine Art Rooted in Story and Vision</h3>
+            <!-- Piece 3: Puppies -->
+            <div class="art-card">
+                <div class="image-frame" onclick="openLightbox('art3.jpeg')">
+                    <img src="art3.jpeg" alt="Puppies Painting by Layla">
+                </div>
+                <div class="art-details">
+                    <div class="art-title">Puppies</div>
+                    <div class="art-meta">Mixed Media Markers &bull; 2026</div>
+                    <div class="art-price">$45.00</div>
