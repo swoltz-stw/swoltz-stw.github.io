@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Artist Portfolio & Shop</title>
+    <style>
+        * { box-sizing: border-box; margin: 0; padding: 0; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; }
+        body { background-color: #f9f9f9; color: #333; line-height: 1.6; }
+        header { background: #ffffff; padding: 2rem; text-align: center; border-bottom: 1px solid #eee; }
+        header h1 { font-weight: 300; letter-spacing: 2px; margin-bottom: 0.5rem; }
+        nav a { margin: 0 10px; color: #666; text-decoration: none; }
+        
+        .container { max-width: 1100px; margin: 2rem auto; padding: 0 1rem; }
+        .intro { text-align: center; margin-bottom: 3rem; max-width: 600px; margin-left: auto; margin-right: auto; }
+        
+        /* Gallery Grid */
+        .gallery { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem; }
+        .art-card { background: #fff; border-radius: 4px; overflow: hidden; box-shadow: 0 2px 5px rgba(0,0,0,0.05); border: 1px solid #eee; display: flex; flex-direction: column; }
+        .art-card img { width: 100%; height: 300px; object-fit: cover; display: block; }
+        .art-details { padding: 1.5rem; display: flex; flex-direction: column; flex-grow: 1; }
+        .art-title { font-size: 1.2rem; margin-bottom: 0.5rem; font-weight: 600; }
+        .art-meta { color: #888; font-size: 0.9rem; margin-bottom: 1rem; }
+        .art-price { font-size: 1.2rem; font-weight: bold; margin-bottom: 1rem; color: #111; }
+        
+        /* Buy Button */
+        .buy-btn { background: #111; color: #fff; text-align: center; padding: 0.75rem; border: none; border-radius: 4px; cursor: pointer; text-decoration: none; font-weight: 600; margin-top: auto; transition: background 0.2s; }
+        .buy-btn:hover { background: #444; }
+        
+        footer { text-align: center; padding: 3rem; color: #888; font-size: 0.9rem; border-top: 1px solid #eee; margin-top: 4rem; }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>My Daughter's Gallery</h1>
+        <nav>
+            <a href="#portfolio">Portfolio</a>
+            <a href="#about">About</a>
+        </nav>
+    </header>
+
+    <div class="container">
+        <section class="intro" id="about">
+            <h2>Welcome to the Gallery</h2>
+            <p>Explore original artwork and fine art prints. Click any item to purchase securely via our checkout partner.</p>
+        </section>
+
+        <!-- Thumbnail grid layout for clean design -->
+        <section class="gallery" id="portfolio">
+            
+            <!-- Art Piece 1 -->
+            <div class="art-card">
+                <!-- Replace with actual compressed image URLs -->
+                <img src="https://unsplash.com" alt="Ocean Sunset Painting">
+                <div class="art-details">
+                    <div class="art-title">Ocean Sunset</div>
+                    <div class="art-meta">Watercolor on Paper, 2026</div>
+                    <div class="art-price">$120.00</div>
+                    <!-- Replace '#' with a payment link from Stripe Payment Links or PayPal -->
+                    <a href="#" target="_blank" class="buy-btn">Purchase Original</a>
+                </div>
+            </div>
+
+            <!-- Art Piece 2 -->
+            <div class="art-card">
+                <img src="https://unsplash.com" alt="Abstract Bloom Painting">
+                <div class="art-details">
+                    <div class="art-title">Abstract Bloom</div>
+                    <div class="art-meta">Acrylic on Canvas, 2026</div>
+                    <div class="art-price">$250.00</div>
+                    <a href="#" target="_blank" class="buy-btn">Purchase Original</a>
+                </div>
+            </div>
+
+            <!-- Art Piece 3 -->
+            <div class="art-card">
+                <img src="https://unsplash.com" alt="Forest Path Painting">
+                <div class="art-details">
+                    <div class="art-title">Forest Path</div>
+                    <div class="art-meta">Oil on Wood Panel, 2026</div>
+                    <div class="art-price">$180.00</div>
+                    <a href="#" target="_blank" class="buy-btn">Purchase Original</a>
+                </div>
+            </div>
+
+        </section>
+    </div>
+
+    <footer>
+        <p>&copy; 2026 My Daughter's Art. All Rights Reserved.</p>
+    </footer>
+
+</body>
+</html>
